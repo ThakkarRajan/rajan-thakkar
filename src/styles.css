@@ -433,7 +433,8 @@ body {
 .timeline-container {
   position: relative;
   max-width: 1000px;
-
+  --timeline-dot: 32px;
+  --timeline-spine: 4px;
   margin: auto;
 }
 .timeline-container::after {
@@ -652,6 +653,9 @@ body {
 }
 
 .project-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font: inherit;
   font-size: 0.9rem;
   font-weight: 600;
@@ -663,6 +667,12 @@ body {
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.project-filter-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
 }
 
 .project-filter-btn:hover {
@@ -743,7 +753,9 @@ body {
 }
 
 .project-type-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -753,6 +765,12 @@ body {
   background: rgba(107, 193, 255, 0.15);
   color: #6bc1ff;
   border: 1px solid rgba(107, 193, 255, 0.35);
+}
+
+.project-type-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
 }
 
 .project-card h3 {
@@ -779,13 +797,29 @@ body {
 }
 
 .project-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 0.75rem;
   padding: 0.2rem 0.5rem;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.06);
   color: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-tag-icon,
+.project-tag-icon-pair svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+  color: #8fd0ff;
+}
+
+.project-tag-icon-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.12rem;
 }
 
 .project-internal-note {
@@ -1194,16 +1228,20 @@ body {
   .timeline-item {
     width: 100%;
     left: 0 !important;
-    padding-left: 2rem;
+    padding-left: calc(var(--timeline-dot) + 0.85rem);
     padding-right: 1rem;
   }
 
   .timeline-container::after {
-    left: 3.5%;
+    left: calc((var(--timeline-dot) - var(--timeline-spine)) / 2);
+    width: var(--timeline-spine);
     transform: none;
   }
 
   .timeline-item::before {
+    box-sizing: border-box;
+    width: var(--timeline-dot);
+    height: var(--timeline-dot);
     left: 0 !important;
     right: auto !important;
   }
@@ -1835,6 +1873,7 @@ body {
 }
 
 .read-more-btn {
+  text-decoration: none;
   background: linear-gradient(135deg, rgba(107, 193, 255, 0.1), rgba(107, 193, 255, 0.05));
   border: 1px solid rgba(107, 193, 255, 0.3);
   color: #6bc1ff;

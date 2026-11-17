@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Used to Ask Bad Questions. Here's What I Learned About Getting Help | Rajan Thakkar</title>
+  <meta name="description" content="I used to ask 'why doesn't this work?' and wonder why no one helped me. Then I learned how to ask questions that actually get answers." />
+  <meta name="author" content="Rajan Thakkar" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://rajan.codes/blog/i-used-to-ask-bad-questions-here-s-what-i-learned-about-getting-help/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="I Used to Ask Bad Questions. Here's What I Learned About Getting Help | Rajan Thakkar" />
+  <meta property="og:description" content="I used to ask 'why doesn't this work?' and wonder why no one helped me. Then I learned how to ask questions that actually get answers." />
+  <meta property="og:url" content="https://rajan.codes/blog/i-used-to-ask-bad-questions-here-s-what-i-learned-about-getting-help/" />
+  <meta property="og:image" content="https://rajan.codes/images/rajan-thakkar-og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="I Used to Ask Bad Questions. Here's What I Learned About Getting Help | Rajan Thakkar" />
+  <meta name="twitter:description" content="I used to ask 'why doesn't this work?' and wonder why no one helped me. Then I learned how to ask questions that actually get answers." />
+  <meta name="twitter:image" content="https://rajan.codes/images/rajan-thakkar-og.jpg" />
+  <link rel="icon" href="/favicon.ico" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"I Used to Ask Bad Questions. Here's What I Learned About Getting Help","description":"I used to ask 'why doesn't this work?' and wonder why no one helped me. Then I learned how to ask questions that actually get answers.","datePublished":"2025-01-23","author":{"@id":"https://rajan.codes/#person"},"publisher":{"@id":"https://rajan.codes/#person"},"mainEntityOfPage":"https://rajan.codes/blog/i-used-to-ask-bad-questions-here-s-what-i-learned-about-getting-help/","url":"https://rajan.codes/blog/i-used-to-ask-bad-questions-here-s-what-i-learned-about-getting-help/","articleSection":"Productivity","keywords":"Communication, Problem Solving, Community, Tips","inLanguage":"en-US"}</script>
+  <style>
+    body { margin: 0; background: #0f0f1a; color: #f2f2f5; font-family: system-ui, -apple-system, sans-serif; line-height: 1.65; }
+    main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    a { color: #8ecbff; }
+    h1 { line-height: 1.25; font-size: 2rem; }
+    .meta { color: #b7b7c4; }
+    nav { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="https://rajan.codes/">Rajan Thakkar</a> · <a href="https://rajan.codes/blog/">Blog</a></nav>
+    <article>
+      <p class="meta">Productivity · <time datetime="2025-01-23">January 23, 2025</time> · 5 min read</p>
+      <h1>I Used to Ask Bad Questions. Here's What I Learned About Getting Help</h1>
+      <p>By <a href="https://rajan.codes/">Rajan Thakkar</a>, full stack developer in Toronto.</p>
+      <p>I used to be terrible at asking for help.</p>
+<p>I'd post in Discord: &quot;My code doesn't work. Help?&quot;</p>
+<p>Crickets.</p>
+<p>Then I'd get frustrated: &quot;Why won't anyone help me?!&quot;</p>
+<p>The problem wasn't that people didn't want to help. The problem was that I was asking a question that was impossible to answer.</p>
+<p>Here's what I learned:</p>
+<h2>The Bad Question (What I Used to Do)</h2>
+<p>&quot;Hey, my React component isn't working. Can someone help?&quot;</p>
+<p><strong>Why it's bad:</strong><br />- No context<br />- No code<br />- No error message<br />- No indication of what I tried<br />- Basically asking someone to read my mind</p>
+<h2>The Good Question (What I Do Now)</h2>
+<p>&quot;Hey, I'm trying to update state in React but the component isn't re-rendering. Here's my code:</p>
+<p>```jsx<br />const [count, setCount] = useState(0);<br />count = 5; // This doesn't work<br />```</p>
+<p>I've tried using setCount(5) but that didn't work either. No error message, it just doesn't update. Any ideas?&quot;</p>
+<p><strong>Why it's better:</strong><br />- Clear problem statement<br />- Shows code (minimal, relevant)<br />- Explains what I tried<br />- Shows I've put in effort</p>
+<h2>The Framework I Use Now:</h2>
+<p><strong>1. What am I trying to do?</strong><br />&quot;I'm trying to update a counter when a button is clicked.&quot;</p>
+<p><strong>2. What's happening instead?</strong><br />&quot;The counter stays at 0, even though I'm calling setCount.&quot;</p>
+<p><strong>3. What have I tried?</strong><br />&quot;I tried setCount(5), I checked the console for errors, I verified the button click is working.&quot;</p>
+<p><strong>4. What's the actual code?</strong><br />```jsx<br />// Minimal, relevant code snippet<br />```</p>
+<p><strong>5. What's the error?</strong><br />&quot;Error: Cannot read property 'map' of undefined&quot; (include the FULL error message!)</p>
+<h2>Real Example:</h2>
+<p><strong>Before:</strong><br />&quot;useEffect isn't working help&quot;</p>
+<p><strong>After:</strong><br />&quot;I'm trying to fetch data when the component mounts using useEffect, but it's running on every render instead of just once. Here's my code:</p>
+<p>```jsx<br />useEffect(() =&gt; {<br />  fetchData();<br />}); // Missing dependency array<br />```</p>
+<p>I've tried adding an empty dependency array but then it doesn't fetch at all. What am I missing?&quot;</p>
+<h2>The Difference?</h2>
+<p>The second question:<br />- Shows I understand the problem<br />- Shows I've tried to solve it<br />- Makes it easy for someone to help<br />- Helps others learn too</p>
+<h2>Pro Tips:</h2>
+<ul><li><strong>Format your code</strong> — Use code blocks, proper indentation</li><li><strong>Be specific</strong> — &quot;useState isn't working&quot; vs &quot;useState hook isn't updating my component&quot;</li><li><strong>Show effort</strong> — List what you've tried</li><li><strong>Include errors</strong> — The full error message, not just &quot;it errors&quot;</li><li><strong>Say thank you</strong> — When someone helps, acknowledge it</li></ul>
+<h2>The Result?</h2>
+<p>When I started asking better questions:<br />- I got answers faster<br />- The answers were more helpful<br />- People were more willing to help<br />- I learned more from the process</p>
+<p><strong>Remember:</strong> Good questions show respect for other people's time. They show you've put in effort. And they get you better answers.</p>
+<p><strong>What's the best question you've asked (or been asked)?</strong> Share it - let's help each other ask better questions!</p>
+      <p><a href="https://rajan.codes/#contact">Contact Rajan Thakkar</a></p>
+    </article>
+  </main>
+</body>
+</html>

@@ -12,18 +12,18 @@ This file (`/llms.txt`) is the machine-oriented entry point for assistants and A
 - [Zapphir](https://zapphir.com): AI-assisted medical care staffing platform (public site, facility tools, admin backend)—built from scratch by Rajan Thakkar; also listed on the portfolio grid.
 - [Resume](https://rajan.codes/#resume): Resume preview and PDF download.
 - [Contact](https://rajan.codes/#contact): Email, phone, contact form, direct hire / collaboration inquiries.
-- [Developer blog](https://rajan.codes/#blog): Long-form articles (hiring, React, career topics) by Rajan Thakkar.
+- [Developer blog](https://rajan.codes/blog/): Long-form articles (hiring, React, career topics) by Rajan Thakkar. Each article is a real URL under `/blog/`, so search engines can index the full text. The on-site section is also at [https://rajan.codes/#blog](https://rajan.codes/#blog).
 
 ## Professional profiles
 
-- [LinkedIn](https://www.linkedin.com/in/rajanthakkar/): Primary professional profile for Rajan Thakkar.
+- [LinkedIn](https://www.linkedin.com/in/rajan-thakkar-dev/): Primary professional profile for Rajan Thakkar.
 - [GitHub (thakkarrajan)](https://github.com/thakkarrajan): Open source and project code.
 - [GitHub (ThakkarRajan)](https://github.com/ThakkarRajan): Additional repositories.
 - [X (Twitter)](https://x.com/rajanthakkar_): Social / updates.
 
 ## Contact (public on site)
 
-- Email: thakkarrajanca@gmail.com
+- Email: rajanthakkar100@gmail.com
 - Phone: +1 (437) 755-3112
 - Region: Toronto, Ontario, Canada
 

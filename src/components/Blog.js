@@ -858,13 +858,20 @@ Looking for a developer who understands both code and business? Let's discuss ho
   }
 ];
 
+function postSlug(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 const blogSchemaAuthor = {
   "@type": "Person",
   name: "Rajan Thakkar",
   url: "https://rajan.codes",
   image: "https://rajan.codes/images/rajan-thakkar-og.jpg",
   sameAs: [
-    "https://www.linkedin.com/in/rajanthakkar/",
+    "https://www.linkedin.com/in/rajan-thakkar-dev/",
     "https://github.com/thakkarrajan",
     "https://x.com/rajanthakkar_",
   ],
@@ -881,8 +888,15 @@ const Blog = () => {
     ? blogPosts 
     : blogPosts.filter(post => post.category === filterCategory);
 
-  // Handle initial scroll to blog section if hash is #blog
   useEffect(() => {
+    const match = window.location.hash.match(/^#blog-post-(\d+)$/);
+    if (match) {
+      const post = blogPosts.find((entry) => entry.id === Number(match[1]));
+      if (post) {
+        setSelectedPost(post);
+        return;
+      }
+    }
     if (window.location.hash === '#blog' && blogSectionRef.current) {
       setTimeout(() => {
         const elementPosition = blogSectionRef.current.getBoundingClientRect().top;
@@ -1111,18 +1125,17 @@ const Blog = () => {
                   </div>
                   <div className="blog-card-meta">
                     <span>{post.readTime}</span>
-                    <button 
-                      type="button"
+                    <a
+                      href={`/blog/${postSlug(post.title)}/`}
                       className="read-more-btn"
                       onClick={(e) => {
                         e.preventDefault();
-                        e.stopPropagation();
                         openPost(post);
                       }}
                       aria-label={`Read more about ${post.title}`}
                     >
                       Read More →
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <meta itemProp="publisher" content="Rajan Thakkar" />

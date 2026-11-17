@@ -68,7 +68,7 @@ const ContactPage = () => {
         <div itemScope itemType="https://schema.org/Person" style={{display: 'none'}}>
           <meta itemProp="name" content="Rajan Thakkar" />
           <meta itemProp="image" content={profileImageAbsoluteUrl} />
-          <meta itemProp="email" content="thakkarrajanca@gmail.com" />
+          <meta itemProp="email" content="rajanthakkar100@gmail.com" />
           <meta itemProp="telephone" content="+1-437-755-3112" />
           <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
             <meta itemProp="addressLocality" content="Toronto" />
@@ -94,7 +94,7 @@ const ContactPage = () => {
         <div className="contact-info" itemScope itemType="https://schema.org/ContactPoint">
           <p className="contact-note">
             <strong>Direct Contact:</strong><br />
-            <a href="mailto:thakkarrajanca@gmail.com" itemProp="email">thakkarrajanca@gmail.com</a><br />
+            <a href="mailto:rajanthakkar100@gmail.com" itemProp="email">rajanthakkar100@gmail.com</a><br />
             <a href="tel:+14377553112" itemProp="telephone">+1 (437) 755-3112</a>
           </p>
           <p className="contact-note">

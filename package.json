@@ -15,7 +15,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "patch-package"
+  },
+  "overrides": {
+    "@tootallnate/once": "2.0.1",
+    "deepmerge": "4.1.2",
+    "nth-check": "2.1.1",
+    "qs": "6.17.1",
+    "svgo": "2.8.4",
+    "resolve-url-loader": "5.0.0",
+    "serialize-javascript": "7.1.4",
+    "webpack-dev-server": "6.1.0"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.1"
   }
 }

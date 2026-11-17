@@ -4,14 +4,16 @@
   "description": "Official portfolio of Rajan Thakkar (Thakkar Rajan), full stack developer in Toronto—projects, resume, blog, contact.",
   "icons": [
     {
-      "src": "logo192.png",
-      "type": "image/jpg",
-      "sizes": "192x192"
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
-      "src": "logo512.png",
-      "type": "image/jpg",
-      "sizes": "512x512"
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
     }
   ],
   "start_url": ".",

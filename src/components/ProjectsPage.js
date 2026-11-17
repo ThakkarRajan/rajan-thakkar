@@ -1,6 +1,46 @@
 import React, { useMemo, useState } from "react";
-import { FiExternalLink } from "react-icons/fi";
-import { SiAppstore, SiGithub, SiGoogleplay } from "react-icons/si";
+import { FaFilePdf, FaFileWord } from "react-icons/fa";
+import {
+  FiCommand,
+  FiExternalLink,
+  FiGlobe,
+  FiGrid,
+  FiMonitor,
+  FiSmartphone,
+  FiSun,
+  FiType,
+} from "react-icons/fi";
+import { HiSparkles } from "react-icons/hi";
+import {
+  MdAdminPanelSettings,
+  MdAnalytics,
+  MdBolt,
+  MdContentCopy,
+  MdDarkMode,
+  MdDashboard,
+  MdDevices,
+  MdEventAvailable,
+  MdGpsFixed,
+  MdLocalHospital,
+  MdRecycling,
+  MdSearch,
+  MdSwipe,
+} from "react-icons/md";
+import {
+  SiAndroid,
+  SiApple,
+  SiAppstore,
+  SiFirebase,
+  SiGithub,
+  SiGooglemaps,
+  SiGoogleplay,
+  SiMaterialdesign,
+  SiNodedotjs,
+  SiReact,
+  SiSwift,
+  SiVercel,
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 import "../styles.css";
 import RevealOnScroll from "./RevealOnScroll";
 import Starfield from "./Starfield";
@@ -10,10 +50,50 @@ const STORE_LINK_ICONS = {
   "app-store": SiAppstore,
 };
 
+const TAG_ICONS = {
+  React: SiReact,
+  "Node.js": SiNodedotjs,
+  AI: HiSparkles,
+  Admin: MdAdminPanelSettings,
+  Healthcare: MdLocalHospital,
+  Responsive: MdDevices,
+  SEO: MdSearch,
+  "Booking UX": MdEventAvailable,
+  iOS: SiApple,
+  Android: SiAndroid,
+  SnapCycle: MdRecycling,
+  Dashboard: MdDashboard,
+  Analytics: MdAnalytics,
+  Firebase: SiFirebase,
+  "Real-time": MdBolt,
+  Vercel: SiVercel,
+  Maps: SiGooglemaps,
+  "OpenWeather API": FiSun,
+  Swift: SiSwift,
+  macOS: SiApple,
+  OCR: FiType,
+  "On-device": MdContentCopy,
+  "Menu bar": FiCommand,
+  GPS: MdGpsFixed,
+  "REST APIs": TbApi,
+  "Swipe UI": MdSwipe,
+  Material: SiMaterialdesign,
+  "Dark mode": MdDarkMode,
+};
+
+const TYPE_ICONS = {
+  "Web App": FiMonitor,
+  "Mobile App": FiSmartphone,
+  "Mac App": SiApple,
+  "Business Website": FiGlobe,
+  Website: FiGlobe,
+};
+
 const FILTER = {
   ALL: "all",
   WEB_APP: "web-app",
   MOBILE: "mobile",
+  MAC: "mac",
   WEBSITE: "website",
 };
 
@@ -21,20 +101,21 @@ const FILTER_LABELS = [
   { id: FILTER.ALL, label: "All" },
   { id: FILTER.WEB_APP, label: "Web apps" },
   { id: FILTER.MOBILE, label: "Mobile" },
+  { id: FILTER.MAC, label: "Mac" },
   { id: FILTER.WEBSITE, label: "Websites" },
 ];
 
-/** I Love Resumes banner from LinkedIn CDN (signed URL may expire). */
-const ILOVE_RESUMES_IMAGE =
-  "https://media.licdn.com/dms/image/v2/D4E16AQHtJqX1DL_nNA/profile-displaybackgroundimage-shrink_350_1400/B4EZhG0gZGGYAY-/0/1753534832760?e=1778716800&v=beta&t=q5cRSk2fI_MsGwRwnJsleFub-aWXspk3CGbcp9Kd0bo";
+const FILTER_ICONS = {
+  [FILTER.ALL]: FiGrid,
+  [FILTER.WEB_APP]: FiMonitor,
+  [FILTER.MAC]: SiApple,
+  [FILTER.MOBILE]: FiSmartphone,
+  [FILTER.WEBSITE]: FiGlobe,
+};
 
-/** Harmony Salon logo via Next.js image optimizer (`w=828` for sharp card display). */
-const HARMONY_SALON_IMAGE =
-  "https://harmonysalon.biz/_next/image?url=%2Flogo.png&w=828&q=80";
-
-/** Circuit (SnapCycle) app icon from Google Play CDN. */
-const CIRCUIT_APP_IMAGE =
-  "https://play-lh.googleusercontent.com/cVmmo1hmM3CixtfJQ9ORWynDB3xeGzAlviuWf7-nf4mkbbZlEL522HXU0IdWJ4ApCGy2KOj8A319S9TKYXyp=w240-h480-rw";
+const ILOVE_RESUMES_IMAGE = "/images/projects/ilove-resumes.png";
+const HARMONY_SALON_IMAGE = "/images/projects/harmony-salon.png";
+const CIRCUIT_APP_IMAGE = "/images/projects/circuit.png";
 
 const projects = [
   {
@@ -71,6 +152,7 @@ const projects = [
     liveUrl: "https://zapphir.com",
     repoUrl: null,
     image: "/images/projects/zapphir.svg",
+    thumbObjectFit: "contain",
     priority: 2,
     caseStudy: {
       problem:
@@ -141,6 +223,29 @@ const projects = [
     },
   },
   {
+    id: "selectext",
+    title: "Selectext",
+    filterKey: FILTER.MAC,
+    type: "Mac App",
+    tags: ["Swift", "macOS", "OCR", "Menu bar"],
+    description:
+      "Menu bar app that copies text from anything on screen. Drag a region, on-device Vision OCR, straight to the clipboard. No account.",
+    liveUrl: null,
+    repoUrl: "https://github.com/ThakkarRajan/Selectext",
+    image: "/images/projects/selectext.png",
+    thumbObjectFit: "contain",
+    priority: 5,
+    caseStudy: {
+      problem:
+        "Text locked in images, videos, and other apps is awkward to retype, and cloud OCR tools send that screen content off the machine.",
+      solution:
+        "Built a Dock-less Mac menu bar app: global shortcut, region capture with ScreenCaptureKit, on-device Vision OCR, and local history.",
+      role: "Product and native macOS development — SwiftUI, AppKit, capture, OCR, and privacy model.",
+      outcome:
+        "Open-source MIT app on GitHub. Recognition stays on the Mac; paste with ⌘V. Build and run from Xcode on macOS 14+.",
+    },
+  },
+  {
     id: "caliber-dashboard",
     title: "Caliber Construction Dashboard",
     filterKey: FILTER.WEB_APP,
@@ -151,7 +256,7 @@ const projects = [
     liveUrl: null,
     repoUrl: null,
     image: "/images/projects/caliber-dashboard.svg",
-    priority: 5,
+    priority: 6,
     internalNote:
       "Internal client tool — live demo and technical walkthrough available on request.",
     contactCta: true,
@@ -176,7 +281,7 @@ const projects = [
     liveUrl: null,
     repoUrl: "https://github.com/ThakkarRajan/liftmates-master",
     image: "/images/projects/liftmates.svg",
-    priority: 6,
+    priority: 7,
   },
   {
     id: "harsmo",
@@ -189,7 +294,7 @@ const projects = [
     liveUrl: "https://harsmo-ventures-1syw.vercel.app/",
     repoUrl: null,
     image: "/images/projects/harsmo.svg",
-    priority: 7,
+    priority: 8,
     caseStudy: {
       problem:
         "The business needed a credible web presence that works globally and reflects a professional logistics brand.",
@@ -211,7 +316,7 @@ const projects = [
     liveUrl: "https://salon-website-eta.vercel.app/",
     repoUrl: null,
     image: "/images/projects/lavish-salon.svg",
-    priority: 8,
+    priority: 9,
   },
   {
     id: "weather",
@@ -224,7 +329,7 @@ const projects = [
     liveUrl: null,
     repoUrl: "https://github.com/ThakkarRajan/Weather-App",
     image: "/images/projects/weather.svg",
-    priority: 9,
+    priority: 10,
   },
   {
     id: "naturalwalk",
@@ -237,7 +342,7 @@ const projects = [
     liveUrl: null,
     repoUrl: "https://github.com/ThakkarRajan/NaturalWalk-iOS-Application",
     image: "/images/projects/naturalwalk.svg",
-    priority: 10,
+    priority: 11,
   },
   {
     id: "news-app",
@@ -250,7 +355,7 @@ const projects = [
     liveUrl: null,
     repoUrl: "https://github.com/ThakkarRajan/News-Application",
     image: "/images/projects/news.svg",
-    priority: 11,
+    priority: 12,
   },
   {
     id: "my-alarm",
@@ -263,7 +368,7 @@ const projects = [
     liveUrl: null,
     repoUrl: "https://github.com/ThakkarRajan/MyAlarmByRajan",
     image: "/images/projects/my-alarm.svg",
-    priority: 12,
+    priority: 13,
   },
 ];
 
@@ -290,7 +395,7 @@ const ProjectsPage = () => {
             My Projects
           </h2>
           <p className="projects-intro">
-            Full-stack web apps, client websites, and mobile work — React, Node.js, and native tooling.
+            Full-stack web apps, client websites, mobile work, and native Mac tools — React, Node.js, and Swift.
             Filter by type or open live demos and source where available.
           </p>
         </header>
@@ -300,17 +405,21 @@ const ProjectsPage = () => {
           role="toolbar"
           aria-label="Filter projects by category"
         >
-          {FILTER_LABELS.map(({ id, label }) => (
-            <button
-              key={id}
-              type="button"
-              className={`project-filter-btn${activeFilter === id ? " is-active" : ""}`}
-              onClick={() => setActiveFilter(id)}
-              aria-pressed={activeFilter === id}
-            >
-              {label}
-            </button>
-          ))}
+          {FILTER_LABELS.map(({ id, label }) => {
+            const FilterIcon = FILTER_ICONS[id];
+            return (
+              <button
+                key={id}
+                type="button"
+                className={`project-filter-btn${activeFilter === id ? " is-active" : ""}`}
+                onClick={() => setActiveFilter(id)}
+                aria-pressed={activeFilter === id}
+              >
+                {FilterIcon ? <FilterIcon className="project-filter-icon" aria-hidden /> : null}
+                <span>{label}</span>
+              </button>
+            );
+          })}
         </div>
 
         <RevealOnScroll>
@@ -321,6 +430,8 @@ const ProjectsPage = () => {
                 project.liveUrl ||
                 project.repoUrl ||
                 undefined;
+
+              const TypeIcon = TYPE_ICONS[project.type];
 
               return (
                 <article
@@ -344,18 +455,34 @@ const ProjectsPage = () => {
                   </div>
                   <div className="project-card-body">
                     <div className="project-card-meta">
-                      <span className="project-type-badge">{project.type}</span>
+                      <span className="project-type-badge">
+                        {TypeIcon ? <TypeIcon className="project-type-icon" aria-hidden /> : null}
+                        {project.type}
+                      </span>
                     </div>
                     <h3 itemProp="name">{project.title}</h3>
                     <p className="project-card-desc" itemProp="description">
                       {project.description}
                     </p>
                     <ul className="project-tags" aria-label="Technologies">
-                      {project.tags.map((tag) => (
-                        <li key={tag}>
-                          <span className="project-tag">{tag}</span>
-                        </li>
-                      ))}
+                      {project.tags.map((tag) => {
+                        const TagIcon = TAG_ICONS[tag];
+                        return (
+                          <li key={tag}>
+                            <span className="project-tag">
+                              {tag === "PDF / Word" ? (
+                                <span className="project-tag-icon-pair" aria-hidden>
+                                  <FaFilePdf />
+                                  <FaFileWord />
+                                </span>
+                              ) : TagIcon ? (
+                                <TagIcon className="project-tag-icon" aria-hidden />
+                              ) : null}
+                              {tag}
+                            </span>
+                          </li>
+                        );
+                      })}
                     </ul>
                     {project.internalNote && (
                       <p className="project-internal-note">{project.internalNote}</p>

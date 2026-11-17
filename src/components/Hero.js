@@ -56,7 +56,7 @@ const Hero = () => (
           </div>
           <div className="hero-links">
             <a
-              href="https://www.linkedin.com/in/rajanthakkar/"
+              href="https://www.linkedin.com/in/rajan-thakkar-dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"

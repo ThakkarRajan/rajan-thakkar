@@ -4,19 +4,19 @@ import "../styles.css";
 const experienceEntries = [
   {
     title: "SnapCycle – Full Stack Developer",
-    time: "June 2025 – Present",
+    time: "Jun 2025 – Present",
   },
   {
-    title: "Vosyn – Full Stack Developer (Internship)",
-    time: "Aug 2024 – Apr 2025",
+    title: "Freelance – Full Stack Developer",
+    time: "Jan 2025 – Present",
   },
   {
-    title: "Freelancer – Web & Mobile Dev",
-    time: "Aug 2022 – Present",
+    title: "Vosyn – Frontend Developer Intern",
+    time: "Aug 2024 – Jan 2025",
   },
   {
-    title: "Inferenz - Machine Learning Engineer",
-    time: "Aug 2022 – Jun 2023",
+    title: "Inferenz – Machine Learning Intern",
+    time: "Sep 2021 – Jan 2022",
   },
 ];
 
