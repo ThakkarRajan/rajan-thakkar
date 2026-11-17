@@ -75,7 +75,7 @@ If you'd like to get in touch, feel free to connect with me:
 
 📧 thakkarrajanca@gmail.com
 
-🌐 rajan.codes
+🌐 rajan-thakkar-gules.vercel.app
 
 💼 LinkedIn
 

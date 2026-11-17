@@ -172,7 +172,7 @@ const projects = [
     tags: ["React", "Responsive", "SEO", "Booking UX"],
     description:
       "Marketing site for an Ahmedabad bridal makeup and salon brand—services, portfolio, pricing, reviews, blog, and trial / WhatsApp booking paths.",
-    liveUrl: "https://harmonysalon.biz/",
+    liveUrl: "https://harmony-salon.vercel.app/",
     repoUrl: null,
     image: HARMONY_SALON_IMAGE,
     thumbObjectFit: "contain",
@@ -184,7 +184,7 @@ const projects = [
         "Built a fast, mobile-first experience with clear service sections, social proof, structured pricing cues, and prominent CTAs aligned with how clients actually book.",
       role: "End-to-end site build—layout, content structure, performance, and deployment to production.",
       outcome:
-        "A polished harmonysalon.biz presence that showcases signature services and makes it easy to start a conversation or book a trial.",
+        "A polished presence at harmony-salon.vercel.app that showcases signature services and makes it easy to start a conversation or book a trial.",
     },
   },
   {

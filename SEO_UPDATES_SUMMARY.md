@@ -111,5 +111,5 @@
 ---
 
 **Last Updated**: November 15, 2025
-**Domain**: rajan.codes
+**Domain**: rajan-thakkar-gules.vercel.app
 

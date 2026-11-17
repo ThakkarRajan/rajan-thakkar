@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://rajan.codes/sitemap.xml
+Sitemap: https://rajan-thakkar-gules.vercel.app/sitemap.xml

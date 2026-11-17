@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import "../styles.css";
 import Starfield from "./Starfield";
 
-const SITE_ORIGIN = "https://rajan.codes";
+const SITE_ORIGIN = "https://rajan-thakkar-gules.vercel.app";
 const profileImagePath = "/images/rajan-thakkar-professional-headshot.jpg";
 const profileImageAbsoluteUrl = `${SITE_ORIGIN}${process.env.PUBLIC_URL}${profileImagePath}`;
 

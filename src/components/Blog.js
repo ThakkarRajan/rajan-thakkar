@@ -868,8 +868,8 @@ function postSlug(title) {
 const blogSchemaAuthor = {
   "@type": "Person",
   name: "Rajan Thakkar",
-  url: "https://rajan.codes",
-  image: "https://rajan.codes/images/rajan-thakkar-og.jpg",
+  url: "https://rajan-thakkar-gules.vercel.app",
+  image: "https://rajan-thakkar-gules.vercel.app/images/rajan-thakkar-og.jpg",
   sameAs: [
     "https://www.linkedin.com/in/rajan-thakkar-dev/",
     "https://github.com/thakkarrajan",
@@ -954,17 +954,17 @@ const Blog = () => {
               "publisher": {
                 "@type": "Person",
                 "name": "Rajan Thakkar",
-                "url": "https://rajan.codes",
-                "image": "https://rajan.codes/images/rajan-thakkar-og.jpg"
+                "url": "https://rajan-thakkar-gules.vercel.app",
+                "image": "https://rajan-thakkar-gules.vercel.app/images/rajan-thakkar-og.jpg"
               },
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": `https://rajan.codes/#blog-post-${selectedPost.id}`
+                "@id": `https://rajan-thakkar-gules.vercel.app/#blog-post-${selectedPost.id}`
               },
               "articleSection": selectedPost.category,
               "keywords": selectedPost.tags.join(", "),
               "inLanguage": "en-US",
-              "url": `https://rajan.codes/#blog-post-${selectedPost.id}`,
+              "url": `https://rajan-thakkar-gules.vercel.app/#blog-post-${selectedPost.id}`,
               "wordCount": selectedPost.content.split(/\s+/).length
             })
           }} />
@@ -978,7 +978,7 @@ const Blog = () => {
               <p className="blog-byline">
                 By{" "}
                 <span itemProp="author" itemScope itemType="https://schema.org/Person">
-                  <a href="https://rajan.codes/" itemProp="url">
+                  <a href="https://rajan-thakkar-gules.vercel.app/" itemProp="url">
                     <span itemProp="name">Rajan Thakkar</span>
                   </a>
                 </span>
@@ -1086,17 +1086,17 @@ const Blog = () => {
                     "publisher": {
                       "@type": "Person",
                       "name": "Rajan Thakkar",
-                      "url": "https://rajan.codes",
-                      "image": "https://rajan.codes/images/rajan-thakkar-og.jpg"
+                      "url": "https://rajan-thakkar-gules.vercel.app",
+                      "image": "https://rajan-thakkar-gules.vercel.app/images/rajan-thakkar-og.jpg"
                     },
                     "mainEntityOfPage": {
                       "@type": "WebPage",
-                      "@id": `https://rajan.codes/#blog-post-${post.id}`
+                      "@id": `https://rajan-thakkar-gules.vercel.app/#blog-post-${post.id}`
                     },
                     "articleSection": post.category,
                     "keywords": post.tags.join(", "),
                     "inLanguage": "en-US",
-                    "url": `https://rajan.codes/#blog-post-${post.id}`
+                    "url": `https://rajan-thakkar-gules.vercel.app/#blog-post-${post.id}`
                   })
                 }} />
                 <div className="blog-card-header">

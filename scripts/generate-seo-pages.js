@@ -3,7 +3,7 @@ const path = require("path");
 
 const root = path.join(__dirname, "..");
 const today = "2026-11-17";
-const origin = "https://rajan.codes";
+const origin = "https://rajan-thakkar-gules.vercel.app";
 
 function postSlug(title) {
   return title
@@ -71,10 +71,10 @@ const blogPosts = eval(expr);
 const projects = [
   ["I Love Resumes", "https://iloveresumes.ca", "AI resume tailoring, job matching, and PDF/Word export."],
   ["Zapphir", "https://zapphir.com", "AI-assisted medical care staffing platform, built end to end."],
-  ["Harmony Salon", "https://harmonysalon.biz/", "Bridal makeup and salon site with booking paths."],
+  ["Harmony Salon", "https://harmony-salon.vercel.app/", "Bridal makeup and salon site with booking paths."],
   ["Circuit", "https://play.google.com/store/apps/details?id=com.snapcycle.circuit", "SnapCycle app: photo an item, get local sorting guidance."],
   ["Selectext", "https://github.com/ThakkarRajan/Selectext", "Mac menu bar app that copies on-screen text with on-device OCR."],
-  ["Caliber Construction Dashboard", "https://rajan.codes/#projects", "Construction project dashboard for tasks, progress, and analytics."],
+  ["Caliber Construction Dashboard", `${origin}/#projects`, "Construction project dashboard for tasks, progress, and analytics."],
   ["Liftmates Car-pool", "https://github.com/ThakkarRajan/liftmates-master", "Real-time carpooling app with Firebase."],
   ["Harsmo Ventures Website", "https://harsmo-ventures-1syw.vercel.app/", "Import-export company site."],
   ["Lavish Look Salon Website", "https://salon-website-eta.vercel.app/", "Salon site with maps and booking."],
@@ -200,7 +200,7 @@ fs.writeFileSync(path.join(blogDir, "index.html"), indexHtml);
 
 const snapshot = `<div id="crawl-snapshot">
       <h1>Rajan Thakkar</h1>
-      <p>Full stack developer in Toronto, Ontario, Canada. React, Node.js, and TypeScript. Also listed as Thakkar Rajan on some profiles. Official site: <a href="${origin}/">rajan.codes</a>.</p>
+      <p>Full stack developer in Toronto, Ontario, Canada. React, Node.js, and TypeScript. Also listed as Thakkar Rajan on some profiles. Official site: <a href="${origin}/">rajan-thakkar-gules.vercel.app</a>.</p>
       <p>Building software that balances product thinking, technical depth, and real usability. Web and mobile applications designed to perform well, scale cleanly, and deliver value beyond the first release.</p>
       <h2>Experience</h2>
       <ul>

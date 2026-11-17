@@ -7,19 +7,19 @@
         http://www.google.com/schemas/sitemap-image/1.1
         http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
   <url>
-    <loc>https://rajan.codes/</loc>
+    <loc>https://rajan-thakkar-gules.vercel.app/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://rajan.codes/images/rajan-thakkar-og.jpg</image:loc>
+      <image:loc>https://rajan-thakkar-gules.vercel.app/images/rajan-thakkar-og.jpg</image:loc>
       <image:title>Rajan Thakkar — Full Stack Developer, Toronto, Canada</image:title>
-      <image:caption>Rajan Thakkar (Thakkar Rajan), full stack developer, Toronto, Canada — official portfolio rajan.codes.</image:caption>
+      <image:caption>Rajan Thakkar (Thakkar Rajan), full stack developer, Toronto, Canada — official portfolio rajan-thakkar-gules.vercel.app.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://rajan.codes/images/rajan-thakkar-professional-headshot.jpg</image:loc>
+      <image:loc>https://rajan-thakkar-gules.vercel.app/images/rajan-thakkar-professional-headshot.jpg</image:loc>
       <image:title>Rajan Thakkar — professional headshot</image:title>
-      <image:caption>Portrait of Rajan Thakkar / Thakkar Rajan, full stack developer, Toronto. Contact and portfolio at rajan.codes.</image:caption>
+      <image:caption>Portrait of Rajan Thakkar / Thakkar Rajan, full stack developer, Toronto. Contact and portfolio at rajan-thakkar-gules.vercel.app.</image:caption>
     </image:image>
   </url>
 </urlset>
